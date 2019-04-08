@@ -1549,6 +1549,7 @@ function hexToRgb(e){var a=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;e=e.replace(a,func
 /* How to use? : Check the GitHub README
 /* ----------------------------------------------- */
 
+/*
 particlesJS('particles-js',
   
   {
@@ -1669,4 +1670,4 @@ particlesJS('particles-js',
   }
 
 );
-	
+	*/
