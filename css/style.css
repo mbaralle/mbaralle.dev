@@ -298,6 +298,9 @@ img.svg{
 }
 .arlo_tm_leftpart_wrap .arlo_tm_resize i.opened{transform: rotate(-180deg);}
 .arlo_tm_rightpart{
+	position: fixed;
+	top: 0;
+	bottom: 0;
 	width: 100%;
 	height: auto;
 	float: left;
@@ -1901,6 +1904,8 @@ img.svg{
 }
 
 .arlo_tm_footer_wrap{
+	position: fixed;
+	bottom: 0;
 	width: 100%;
 	height: auto;
 	clear: both;
