@@ -36,6 +36,14 @@
 
 
 	<link rel="icon" type="image/png" href="img/logo/mbaralle-m-logo-32.png">
+
+	<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LduAZ0UAAAAADbCe4OuLMC7fL7NGnWjFzXsGI7u'
+        });
+      };
+    </script>
 </head>
 
 <body>
@@ -388,25 +396,21 @@
 										<div class="arlo_tm_contact_wrap">
 											<div class="main_input_wrap">
 												<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
-												<form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSfdguKhww5y3SXtZr87oWe6FDkVXU-WdsYpDdbsKpvqhWevfg/formResponse" target="hiddenFrame" method="post" class="contact_form" id="contact_form">
-													<div class="returnmessage" style="display: none;" id="contact_form_return"><span>Your message has been sent.</span></div>
-													<div class="empty_notice" id="contact_form_error"><span>Please Fill Required Fields</span></div>
+												<form class="contact_form" action="https://formspree.io/xqkqnkvo" method="POST">
 													<div class="wrap">
-														<input id="contact_form_name" name="entry.1462022525" type="text" placeholder="Your Name" required>
+														<input type="text" name="name" placeholder="Your Name" required>
 													</div>
 													<div class="wrap">
-														<input id="contact_form_email" name="entry.1494297342" type="text" placeholder="Your Email" required>
+														<input type="email" name="_replyto" placeholder="Your Email" required>
 													</div>
 													<div class="wrap">
-														<textarea id="contact_form_message" name="entry.830131041" placeholder="Your Message" required></textarea>
+														<textarea name="message" placeholder="Your Message" required></textarea>
 													</div>
-													<div class="arlo_tm_button">
-														<a id="send_message" onclick="sendMessage()"><span>Send Message</span></a>
+    												<div class="wrap">
+    													<div id="html_element"></div>
 													</div>
-													<input type="hidden" name="fvv" value="1">
-													<input type="hidden" name="pageHistory" value="0">
-													<input type="hidden" name="fbzx" value="603672936034118599">
-													<input type="submit" hidden id="submit_contact_form">
+													<input type="submit" value="Send" class="arlo_tm_button">
+    												<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 												</form>
 											</div>
 										</div>
