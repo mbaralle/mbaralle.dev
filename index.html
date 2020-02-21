@@ -395,8 +395,7 @@
 									<div class="rightbox">
 										<div class="arlo_tm_contact_wrap">
 											<div class="main_input_wrap">
-												<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
-												<form class="contact_form" action="https://formspree.io/xqkqnkvo" method="POST">
+												<form class="contact_form" id="contact_form" onsubmit="sendMessage()">
 													<div class="wrap">
 														<input type="text" name="name" placeholder="Your Name" required>
 													</div>
@@ -410,7 +409,14 @@
     													<div id="html_element"></div>
 													</div>
 													<input type="submit" value="Send" class="arlo_tm_button">
-    												<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+													<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+													<script>
+														const form = document.getElementById("contact_form");
+														form.addEventListener("submit", function (event) {
+															event.preventDefault();
+															sendMessage();
+														});
+													</script>
 												</form>
 											</div>
 										</div>
