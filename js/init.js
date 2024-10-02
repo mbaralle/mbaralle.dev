@@ -63,6 +63,22 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 
 // -----------------------------------------------------
+// ------------------------ AGE ------------------------
+// -----------------------------------------------------
+function updateAge() {
+	const birthDate = new Date('1996-04-29');
+	const today = new Date();
+
+	const isBirthdayPassed = today.getMonth() > birthDate.getMonth() ||
+		(today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+	const age = today.getFullYear() - birthDate.getFullYear() - (isBirthdayPassed ? 0 : 1);
+
+	var ageContainer = document.getElementById('age-container');
+	ageContainer.innerHTML = age;
+}
+
+// -----------------------------------------------------
 // --------------------  COPYRIGHT  --------------------
 // -----------------------------------------------------
 function updateCopyright(){
